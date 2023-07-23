@@ -8,12 +8,30 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./index.js"></script>
   <title>Get User Location</title>
+  <style>
+    .place-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .place-container li {
+      margin: 10px;
+    }
+  </style>
 </head>
 
 <body>
 
   <button onclick="getLocation()" src="">Get Location</button>
-  <div id="nearby-places"></div>
+  <!--Get radius input -->
+  <input type="text" id="radius" placeholder="Enter radius in meters">
+  <div class="place-container">
+    <li id="place-name"></li>
+    <li id="place-adress"></li>
+    <li id="place-latitude"></li>
+    <li id="place-longitude"></li>
+  </div>
+
 
 </body>
 
